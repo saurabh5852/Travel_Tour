@@ -1,0 +1,474 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+<link rel="stylesheet" href="{% static 'crousel.css' %}">
+<link rel="stylesheet" href="{% static 'footer.css' %}">
+<link rel="stylesheet" href="{% static 'why.css' %}">
+<link rel="stylesheet" href="{% static 'testi.css' %}">
+
+<title>BlueSpace - Travel & Holiday Planner</title>
+<style>
+
+
+  html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  
+}
+.logo {
+  color: white;
+  font-size: 30px;
+  float: left;
+  padding-left: 30px;
+  padding-top: 0;
+}
+
+.logo span {
+  color: blue;
+}
+
+.logo img{
+  border-radius: 50%;
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: #EAB875;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+font-weight: bolder;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: right;
+  
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;    
+  border: none;
+  outline: none;
+  color: #EAB875;
+  padding: 16px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-weight: bolder;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7BC5C1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: white;
+  transition:all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+</style>
+
+
+
+<title>bluespace</title>
+
+</head>
+<body>
+<div>
+<div class="topnav" id="myTopnav">
+  <h1 class="logo"><img src="{% static 'BS logo 2.jpg' %}" alt="logo\image"  height="30px" width="30px"><u>BLue</u><span>SPace</span></h1>
+  <a href="{% url 'loginin' %}" class="active">Login</a>
+  <a href="{% url 'about' %}">About</a>
+  <a href="{% url 'contact' %}">Contact</a>
+  <div class="dropdown">
+    <button class="dropbtn">Explore 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="{% url 'dubai' %}">Dubai</a>
+      <a href="{% url 'seychelles' %}">Seychelles</a>
+      <a href="{% url 'thailand' %}">Thailand</a>
+      <a href="{% url 'singapore' %}">Singapore</a>
+    </div>
+  </div> 
+  <a href="{% url 'home' %}">Home</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+
+
+
+
+
+
+<!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="{%static 'carsoel img1.jpg' %}" alt="" />
+      <div class="centered">"TRAVEL"
+        An Investment In Yourself
+      </div>
+      
+
+    </div>
+    <div class="swiper-slide">
+      <img src="{%static 'carsoel img2.jpg' %}" alt="" />
+      <div class="centered">"Begin's"
+        Journey With Friends and Family
+      </div>
+     
+    </div>
+    <div class="swiper-slide">
+      <img src="{%static 'carsoel img3.jpg' %}" alt="" />
+      <div class="centered">"Let's"
+          Take Adventure In Life
+      </div>
+      
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>
+
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<script>
+  var swiper = new Swiper(".mySwiperdemo", {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    slidesPerGroup: 3,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+
+  <div class="section-heading">
+    <h2>Top Attractions</h2>
+  </div>
+  <div class="top-attractions">
+    <div class="container-lg">
+      <ul>
+        <li style="background-image: url('{% static 't img1.jpg' %}');">
+          <a href="{% url 'dubai' %}">
+            <div class="v-align">
+              <h3>Dubai</h3>
+            </div>
+          </a>
+        </li>
+        <li style="background-image: url('{% static 't img2.jpg' %}');">
+          <a href="{% url 'seychelles' %}">
+            <div class="v-align">
+              <h3>Seychelles</h3>
+            </div>
+          </a>
+        </li>
+        <li style="background-image: url('{% static 'timg3.jpg' %}');">
+          <a href="{% url 'thailand' %}">
+            <div class="v-align">
+              <h3>Thailand</h3>
+            </div>
+          </a>
+        </li>
+        <li style="background-image: url('{% static 'timg4.jpg' %}');">
+          <a href="{% url 'singapore' %}">
+            <div class="v-align">
+              <h3>Singapore</h3>
+            </div>
+          </a>
+        </li>
+                  </ul>
+    </div>
+  </div>
+
+
+
+
+ 
+    <div class="pera"><h1 class="testi">Testinomials</h1></div>
+    
+   
+    <div class="swiper mySwiper" id="huh">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="four">
+            <img src="{%static 'slideshow.jpg' %}" alt="" />
+            <p class="center">We Were bit hesitant initially before making a booking through 
+              Travophilic. Had heard about them through a friend and 
+              decided to give it a try. We never regretted that decision!! 
+              Their enthusiasm is amazing and the way Mayank was helping
+              all the way was simply great. Would recommend to all my friends
+                                                and family.</p>
+            
+    <p class="para">- Vishnu Kumar, Delhi</p>
+          </div>
+          <div class="swiper-slide" id="four">
+            <img src="{%static 'slideshow.jpg' %}" alt="" />
+            <p class="center">First of all, many thanks to the team for making this trip a 
+              memorable one.Special thanks to Yash who coordinated 
+            everything by providing exceptional customer service.We keep 
+              changing the requirements but they never raised any
+               issue or tried to convince us with pre-defined packages.
+               They customised everything exactly what we asked for</p>
+            <p class="para">- Jai Prakash, Delhi</p>
+
+          </div>
+          <div class="swiper-slide" id="four">
+            <img src="{%static 'slideshow.jpg'%}" alt="" />
+            <p class="center"> The team is new to the game which came as a boon.They
+              had fresh insights along with unparalleled professionalism.
+            We would recommend booking through Travophilic for all
+              who want something out of ordinary to be on a trip of a lifetime.</p>
+            <p class="para">- Manish Agrawal, Delhi</p>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+        
+    
+        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+       
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+    
+        <script>
+          var swiper = new Swiper(".mySwiperdemo", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            slidesPerGroup: 3,
+            loop: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        </script>
+
+
+    
+<!-- footer -->
+
+<div class="col-container">
+  <div class="why"> <h1>Why Choose Us </h1></div>
+   <div class="col" >
+      <p> <i class="far fa-star"></i></p>
+     <h4 class="mn">Quality and Service</h4>
+     <p>We go above and beyond to ansure quality and service are
+       met at every step of your journey. We
+       closely monitor client satisfaction and 
+       are consistently seeking new ways to exceed 
+       our clients’ expectations.</p>
+    
+   </div>
+   <div class="col" >
+      <p> <i class="far fa-hand-peace"></i></p>
+     <h4 class="mn">Personal Service</h4>
+     <p> We specialize in crafting vacation packages tailored
+       to the special needs of your customers.</p>
+     
+   </div>
+   <div class="col" >
+       <p><i class="far fa-thumbs-up"></i></p>
+     <h4 class="mn">Time and Value</h4>
+     <p>One thing we can offer that is truly priceless 
+       though is time - while we do all the heavy 
+       lifting, you can sit back safe in the knowledge
+       that we will plan your perfect trip down 
+       to the smallest detail.</p>
+     
+   </div>
+ </div>
+
+ <footer class="footer">
+   <div class="container">
+       <div class="row">
+           <div class="footer-col">
+               <h4>company</h4>
+               <ul>
+                   <li><a href="{% url 'about' %}">About us</a></li>
+                   <li><a href="{% url 'Terms' %}">Terms & Condition</a></li>
+                   <li><a href="{% url 'privacy' %}">Privacy Policy</a></li>
+                   
+               </ul>
+           </div>
+           <div class="footer-col">
+               <h4>Get help</h4>
+               <ul>
+                   <li><a href="http://wa.me/916376647848">Get In Touch</a></li>
+                   <li><a href="login.html">Your Profile</a></li>
+                   <li><a href="contact.html">Contact Us</a></li>
+               </ul>
+           </div>
+           <div class="footer-col">
+               <h4>Our Spots</h4>
+               <ul>
+                   <li><a href="dubai.html">Dubai</a></li>
+                   <li><a href="Seychelles.html">Seychelles</a></li>
+                   <li><a href="thailand.html">Thailand</a></li>
+                   <li><a href="singapore.html">Singapore</a></li>
+               </ul>
+           </div>
+           <div class="footer-col">
+           <h4>follow us</h4>
+           <div class="social-links">
+               <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+               <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+               <a href="https://www.snapchat.com"target="_blank"><i class="fab fa-snapchat"></i></a>
+               <a href="https://in.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+           </div>
+           </div>
+       </div>
+   </div>
+
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,417 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Singapore - BlueSpace</title>
+
+
+    <style>
+        .topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
+  
+}
+.logo {
+  color: white;
+  font-size: 30px;
+  float: left;
+  padding-left: 30px;
+  padding-top: 0;
+}
+
+.logo span {
+  color: blue;
+}
+
+.logo img{
+  border-radius: 50%;
+}
+.topnav a {
+  float: right;
+  display: block;
+  color: #EAB875;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+font-weight: bolder;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: right;
+  
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;    
+  border: none;
+  outline: none;
+  color: #EAB875;
+  padding: 16px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  font-weight: bolder;
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #7BC5C1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  color: white;
+  transition:all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+      
+        .logo {
+  color: white;
+  font-size: 30px;
+  float: left;
+  padding-left: 30px;
+  
+}
+
+.logo span {
+  color: blue;
+}
+
+.logo img{
+  border-radius: 50%;
+}
+        .four{
+            /* margin-left: 160px; */
+            margin-top: 0;
+            overflow-x: hidden;
+        }
+        .image{
+            background: url("{% static 'sing1.jpg' %}");
+            /* height: 500px; */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            background-position: 30%;
+            
+        }
+        .image:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        h1{
+            padding-top: 230px;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .how{
+            padding: 20px;
+            background-color: black;
+            color: white;
+            margin-top: -3.3px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .col-container{
+  background: url("{% static 'sing2.jpg' %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(80%);
+  /* height: 1000px; */
+  
+}
+.col {
+/* margin-top: 150px; */
+  /* margin-bottom: 100px; */
+  float: center;
+  width: 50%;
+  height: 350px;
+  margin-left: 300px;
+  padding-top: 150px;
+  /* padding-left: 250px; */
+  
+}
+
+.col-container h2{
+    text-align: center;
+    /* padding-bottom: 300px; */
+    color: white;
+    font-size: 30px;
+    /* padding-top: -200px; */
+}
+.col p{
+  text-align: left;
+  color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.col-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rout{
+    float: center;
+  width: 50%;
+  height: 150px;
+  margin-left: 300px;
+  padding-top: 50px;
+}
+.rout p{
+    text-align: left;
+    color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.out{
+    float: center;
+  width: 50%;
+  height: 350px;
+  margin-left: 300px;
+  padding-top: 50px;
+}
+.out p{
+    text-align: left;
+    color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width:550px){
+    .col{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    .rout{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    .out{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    
+}
+@media screen and (max-width:850px){
+    .col{
+        
+        padding-bottom: 400px;
+    }
+    .rout{
+       
+        padding-bottom: 300px;
+    }
+    .out{
+       
+        padding-bottom: 300px;
+    }
+    
+}
+@media screen and (min-width:100px) and (max-width:550px){
+    .col{
+        margin-left: 80px;
+        padding-bottom: 700px;
+    }
+    .rout{
+        margin-left: 80px;
+        padding-bottom: 700px;
+    }
+    .out{
+        margin-left: 80px;
+        padding-bottom: 700px;
+    }
+    
+}
+    </style>
+</head>
+<body>
+
+  <div class="topnav" id="myTopnav">
+    <h1 class="logo"><img src="{% static 'BS logo 2.jpg' %}" alt="logo\image"  height="30px" width="30px"><u>BLue</u><span>SPace</span></h1>
+    <a href="{% url 'loginin' %}" class="active">Login</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Explore 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{% url 'dubai' %}">Dubai</a>
+        <a href="{% url 'seychelles' %}">Seychelles</a>
+        <a href="{% url 'thailand' %}">Thailand</a>
+        <a href="{% url 'singapore' %}">Singapore</a>
+      </div>
+    </div> 
+    <a href="{% url 'home' %}">Home</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    <div class="image">
+    <div class="four">
+        <!-- <img src="dubai1.jpg" alt=""> -->
+    <h1>SINGAPORE</h1>
+</div>
+</div>
+<div class="how">
+    Home>>Explore>>Singapore
+</div>
+
+<div class="col-container">
+   
+     <div class="col" >
+        
+       <p> Known as the Lion city, the Garden city and the Red Dot, Singapore is one of the most
+        popular tourist destinations in South-East Asia. So if you’re thinking of a short
+        holiday not too far from India, look no further than Singapore – the dynamic city-state, 
+        a short flight away from all major cities in India. A heady combination of Chinese, 
+        Indian, Malay and Western influences, Singapore is truly a cultural melting pot.
+        Delicious food, high street shopping, contemporary arts etc– find all these at one place.</p>
+   </div>
+
+   <h2>Major Attraction</h2>
+    <div class="rout">
+   <p><strong> Singapore Night Safari :</strong>Singapore Night Safari is truly a unique attraction. It is
+    not only an interesting place worth a visit but also a leading conservation and research 
+    centre in Asia. As a zoo, it offers an unusual glimpse into the nocturnal animal kingdom,
+    with more than 59 exhibits and 1,000 animals to be seen from around the world.</p></div>
+    <div class="out">
+   <p><strong>Sentosa:</strong> Sentosa is a purpose built island off the southern tip of Singapore which 
+    was built with leisure and relaxation in mind. A collection of beaches, theme parks, golf, 
+    shopping, dining and more are all available on this strip of reclaimed land that can be 
+    reached by road or cable car.</p></div>
+
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>company</h4>
+                <ul>
+                    <li><a href="{% url 'about' %}">About us</a></li>
+                    <li><a href="terms.html">Terms & Condition</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <!-- <li><a href="#">Privacy Policy</a></li> -->
+                    
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Get help</h4>
+                <ul>
+                    <li><a href="http://wa.me/916376647848">Get In Touch</a></li>
+                    <li><a href="login.html">Your Profile</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <!-- <li><a href="#">payment option</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Our Spots</h4>
+                <ul>
+                    <li><a href="dubai.html">Dubai</a></li>
+                    <li><a href="Seychelles.html">Seychelles</a></li>
+                    <li><a href="thailand.html">Thailand</a></li>
+                    <li><a href="singapore.html">Singapore</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.snapchat.com"target="_blank"><i class="fab fa-snapchat"></i></a>
+                <a href="https://in.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+.col-container{
+  background: url(chose.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 1000px; */
+  
+}
+.col {
+margin-top: 150px;
+  margin-bottom: 100px;
+  float: left;
+  width: 30%;
+  height: 350px;
+  padding: 15px;
+  margin-left: 20px;
+  
+}
+p{
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+ p i{
+  font-size: 35px;
+  color: white;
+  
+}
+.mn {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+.why h1{
+  text-align: center;
+  color: white;
+}
+.why{
+  background-color: black;
+  padding: 10px;
+}
+.col-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 815px) {
+  .col {
+    width: 100%;
+    margin-top: 0px;
+    
+  }
+}

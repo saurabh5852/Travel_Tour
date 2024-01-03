@@ -1,0 +1,412 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Privacy Policy - BlueSpace</title>
+
+
+    <style>
+      
+        .logo {
+  color: white;
+  font-size: 30px;
+  float: left;
+  padding-left: 30px;
+  
+}
+
+.logo span {
+  color: blue;
+}
+
+.logo img{
+  border-radius: 50%;
+}
+        .four{
+           
+            margin-top: 0;
+            overflow-x: hidden;
+        }
+        .image{
+          background: url("{% static 'sing1.jpg' %}");
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            background-position: 30%;
+            
+        }
+        .image:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+        h1{
+            padding-top: 230px;
+            font-size: 50px;
+            color: white;
+            text-align: center;
+        }
+        p{
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .how{
+            padding: 20px;
+            background-color: black;
+            color: white;
+            margin-top: -3.3px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .col-container{
+          background: url("{% static 'term.webp' %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1500px;
+  
+}
+.col {
+
+  float: center;
+  width: 60%;
+  height: 350px;
+  margin-left: 300px;
+  padding-top: 150px;
+ 
+  
+}
+
+.col-container h2{
+    text-align: center;
+    
+    color: white;
+    font-size: 40px;
+    padding-top: 100px;
+}
+.col p{
+  text-align: left;
+  color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.col-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.rout{
+    float: center;
+  width: 50%;
+  height: 100px;
+  margin-left: 300px;
+  padding-top: 50px;
+}
+.rout p{
+    text-align: left;
+    color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.out{
+    float: center;
+  width: 50%;
+  height: 210px;
+  margin-left: 300px;
+  padding-top: 50px;
+}
+.out p{
+    text-align: left;
+    color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ut{
+    float: center;
+  width: 50%;
+  height: 80px;
+  margin-left: 300px;
+ 
+}
+.ut p{
+    text-align: left;
+    color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.t{
+    float: center;
+  width: 50%;
+  height: 200px;
+  margin-left: 300px;
+ 
+}
+.t p{
+    text-align: left;
+    color: white;
+  font-size: 17px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media screen and (max-width:550px){
+    .col{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    .rout{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    .out{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    .ut{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    .t{
+        margin-left: 30px;
+        padding-bottom: 300px;
+    }
+    
+}
+@media screen and (max-width:850px){
+    .col{
+        
+        padding-bottom: 200px;
+    }
+    .rout{
+       
+        padding-bottom: 200px;
+    }
+    .out{
+       
+        padding-bottom: 200px;
+    }
+    .ut{
+       
+        padding-bottom: 200px;
+    }
+    .t{
+       
+        padding-bottom: 300px;
+    }
+    .col-container{
+      height: 2000px;
+    }
+    
+}
+@media screen and (min-width:100px) and (max-width:550px){
+    .col{
+        margin-left: 80px;
+        padding-bottom: 100px;
+    }
+    .rout{
+        margin-left: 80px;
+        padding-bottom: 200px;
+    }
+    .out{
+        margin-left: 80px;
+        padding-bottom: 700px;
+    }
+    .ut{
+        margin-left: 80px;
+        padding-bottom: 300px;
+    }
+    .t{
+        margin-left: 80px;
+        padding-bottom: 500px;
+    }
+    .col-container{
+      height: 3500px;
+    }
+}
+@media screen and (min-width:550px) and (max-width:800px){
+  .col-container{
+      height: 2700px;
+      
+    }
+    .t{
+      padding-right: 30px;
+    }
+}
+
+@media screen and (min-width:850px) and (max-width:1200px){
+  .col-container{
+      height: 1850px;
+      
+    }
+}
+@media screen and (min-width:310px) and (max-width:390px){
+  .col-container{
+      height: 4000px;
+      
+    }
+}
+@media screen and (min-width:100px) and (max-width:310px){
+  .col-container{
+      height: 5000px;
+    }
+}
+    </style>
+</head>
+<body>
+  <div class="topnav" id="myTopnav">
+    <h1 class="logo"><img src="{% static 'BS logo 2.jpg' %}" alt="logo\image"  height="30px" width="30px"><u>BLue</u><span>SPace</span></h1>
+    <a href="{% url 'loginin' %}" class="active">Login</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Explore 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{% url 'dubai' %}">Dubai</a>
+        <a href="{% url 'seychelles' %}">Seychelles</a>
+        <a href="{% url 'thailand' %}">Thailand</a>
+        <a href="{% url 'singapore' %}">Singapore</a>
+      </div>
+    </div> 
+    <a href="{% url 'home' %}">Home</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  
+      
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
+<div class="image">
+<div class="col-container">
+   
+    
+
+  <h2>Privacy Policy</h2>
+ <pre>
+
+
+
+ </pre>
+
+  <div class="t">
+    
+    <p>BlueSpace respects your privacy and recognizes the need to protect the personally identifiable information (any information  by
+      which you can be identified, such as name, address and telephone number) you share with us. We would like to assure you that  
+      we follow appropriate standards when it comes to protecting your privacy on our websites.</p>
+<pre>
+
+
+</pre>
+    <p>Some of our web pages use “cookies” so that we can better serve you with customized information when you return to our site. 
+      Cookies are identifiers which a website can send to your browser to keep on your computer to facilitate your next visit to 
+      our site. You can set your browser to notify you when you are sent a cookie, giving you the option to decide whether or not 
+      to accept it. The information we collect and analyze is used to improve our service to you.</p>
+<pre>
+
+
+</pre>
+     <p>There are times when we may collect personal information from you such as name, physical address or telephone number. It is 
+      our intent to inform you before we do that and to tell you what we intend to do with the information. Generally, you will 
+      have the option not to provide the information, and in the future, you will be able to “opt out” of certain uses of the 
+      information. If you choose not to provide the information we request, you can still visit our website https://www.BlueSpace.com, 
+      but you may be unable to access certain options, offers and services.</p>
+<pre>
+
+
+</pre>
+      <p>BlueSpace will not sell, trade or disclose to third parties any information derived from the registration form, or use of,
+        any online service (including names and addresses) without the consent of the user or customer (except as required by subpoena, 
+        search warrant, or other legal process or in the case of imminent physical harm to the user or others). Travophilic will 
+        allow suppliers to access the information for purpose of confirming your registration and providing you with benefits you 
+        are entitled to.</p>
+      <pre>
+
+      </pre>
+      <p>BlueSpace will take appropriate steps to protect the information you share with us. We have implemented technology and 
+        securityfeatures and strict policy guidelines to safeguard the privacy of your personally identifiable information from 
+        unauthorized access and improper use or disclosure. BlueSpace will continue to enhance our security procedures as new 
+        technology becomes available.</p>
+        <pre>
+
+
+        </pre>
+        <p>If our privacy policy changes in the future, it will be posted here and a new effective date will be shown. You should 
+          access our privacy policy regularly to ensure you understand our current policies.</p>
+          <pre>
+
+
+          </pre>
+          <p>Thank you for using https://www.BlueSpace.com/</p>
+          <pre>
+
+          </pre>
+          <p>Last updated : 29 August 2022</p>
+  </div>
+
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="row">
+          <div class="footer-col">
+              <h4>company</h4>
+              <ul>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="terms.html">Terms & Condition</a></li>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <!-- <li><a href="#">Privacy Policy</a></li> -->
+                  
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Get help</h4>
+              <ul>
+                  <li><a href="http://wa.me/916376647848">Get In Touch</a></li>
+                  <li><a href="login.html">Your Profile</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <!-- <li><a href="#">payment option</a></li> -->
+              </ul>
+          </div>
+          <div class="footer-col">
+              <h4>Our Spots</h4>
+              <ul>
+                  <li><a href="dubai.html">Dubai</a></li>
+                  <li><a href="Seychelles.html">Seychelles</a></li>
+                  <li><a href="thailand.html">Thailand</a></li>
+                  <li><a href="singapore.html">Singapore</a></li>
+              </ul>
+          </div>
+          <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+              <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.snapchat.com"target="_blank"><i class="fab fa-snapchat"></i></a>
+              <a href="https://in.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          </div>
+      </div>
+  </div>
+
+</footer>
+
+</body>
+</html>

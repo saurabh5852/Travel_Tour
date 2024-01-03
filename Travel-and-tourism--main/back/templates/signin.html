@@ -1,0 +1,166 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styling.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="{% static 'footer.css'%}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Transparent form</title>
+  <style>
+/* input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border-radius: 15px;
+    
+   } */
+#id_email{
+  background-color: transparent;
+  width: 86%;
+}
+label{
+  display: none;
+}
+body{
+  background-image: url('{%static "login.jpg"%}');
+}
+.button {
+    display: block;
+    width: 120px;
+    height: 50px;
+    background: #4E9CAF;
+    padding: 10px;
+    margin-top: 15px;
+    margin-left: 100px;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;}
+    
+#id_password{
+  background-color: transparent;
+  width: 86%;
+}
+#id_FirstName{
+  width: 86%;
+}
+#id_LastName{
+  width: 86%;
+}
+#id_Confirmpassword{
+  width: 86%;
+}
+.submit{
+  background-color: green !important;
+
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="topnav" id="myTopnav">
+    <h1 class="logo"><img src="{% static 'BS logo 2.jpg' %}" alt="logo\image"  height="30px" width="30px"><u>BLue</u><span>SPace</span></h1>
+    <a href="{% url 'loginin' %}" class="active">Login</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Explore 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{% url 'dubai' %}">Dubai</a>
+        <a href="{% url 'seychelles' %}">Seychelles</a>
+        <a href="{% url 'thailand' %}">Thailand</a>
+        <a href="{% url 'singapore' %}">Singapore</a>
+      </div>
+    </div> 
+    <a href="{% url 'home' %}">Home</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+
+  <div class="container">
+    <div class="form">
+      <div class="formGroup">
+      <form class="signin" action="" method="post">
+          {%csrf_token%}
+          
+        {{form.as_p}}
+        <div class="submit">
+          <input type="submit"/>
+        </div>
+      </form>
+      </div>
+
+      <a href="{% url 'empRegis'%}" class="button" style="text-decoration: none;">Sign up</a>
+    </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="footer-col">
+                  <h4>company</h4>
+                  <ul>
+                      <li><a href="about.html">About us</a></li>
+                      <li><a href="terms.html">Terms & Condition</a></li>
+                      <li><a href="privacy.html">Privacy Policy</a></li>
+                     
+                      
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Get help</h4>
+                  <ul>
+                      <li><a href="http://wa.me/916376647848">Get In Touch</a></li>
+                      <li><a href="login.html">Your Profile</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                      
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>Our Spots</h4>
+                  <ul>
+                      <li><a href="dubai.html">Dubai</a></li>
+                      <li><a href="Seychelles.html">Seychelles</a></li>
+                      <li><a href="thailand.html">Thailand</a></li>
+                      <li><a href="singapore.html">Singapore</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+              <h4>follow us</h4>
+              <div class="social-links">
+                  <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="http://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://www.snapchat.com"target="_blank"><i class="fab fa-snapchat"></i></a>
+                  <a href="https://in.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              </div>
+          </div>
+      </div>
+  
+  </footer>
+  <script src="{% static 'jQuery.js'%}"></script>
+</body>
+
+</html>
